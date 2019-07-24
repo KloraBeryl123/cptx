@@ -1,7 +1,7 @@
 <template>
 <div class="form-group">
-    <img src="../assets/lmbg.jpg" style="position:absolute;z-index:-1;width:100%;height:73rem;opacity:0.9">
-     <div > 
+    <img src="../assets/lmbg.jpg" style="position:absolute;z-index:-1;width:100%;height:78rem;opacity:0.9">
+     <div class=""> 
         <div>
             <h1 style="color:white">找回密码</h1>
         </div>
@@ -163,6 +163,7 @@ export default {
   background-color:#E08376 !important;
   border:0 !important;
 }
+
 .form-group>div>div:first-child{
    text-align: center;
 }

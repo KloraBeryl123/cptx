@@ -14,7 +14,7 @@
                     <Input search placeholder="搜索" style="width:200px;float:right;margin-left:14px" focus/>
                 </div>
             </div> 
-            <div class="wrap">
+            <!-- <div class="wrap">
                 <ul class="ul2">
                     <div>
                         <li v-for="(elem,i) of list2" :key="i" ><a href="#" style="text-decoration:none">{{elem}}</a></li>
@@ -79,7 +79,7 @@
                         </div>
                     </div>    
                 </ul>    
-            </div>
+            </div> -->
             <div class="detail"> 
                 <div class="zuo" >
                     <div class="zuo_a" v-for="(item,i) of list3" :key="i">
@@ -92,7 +92,7 @@
                             <p>{{item.detail}}</p>
                         </div>
                     </div>
-                    <el-button style="width:60%;margin:0 auto;margin-top:2rem" type="primary" @click="loadMore">换一批</el-button>
+                    <el-button style="width:60%;margin-top:2rem;background-color:#ec5541;color:white"  @click="loadMore">换一批</el-button>
                 </div>
                 <div class="you">
                     <div class="containers" @mouseleave="start" @mouseenter="stop">
@@ -177,7 +177,7 @@ export default {
             ulClass:{
                 hasTrans:true
             },
-            innerWidth:window.innerWidth*0.2,
+            innerWidth:window.innerWidth*0.3,
             idx:0,
             timer:null,
             tu:[
@@ -194,7 +194,7 @@ export default {
         this.loadMore();
         this.start();
         window.addEventListener("resize",()=>{
-        this.innerWidth=window.innerWidth*0.2;
+        this.innerWidth=window.innerWidth*0.3;
       })
     },
     methods: {
@@ -261,7 +261,7 @@ export default {
 }
 </script>
 <style scoped>
-    .meishi{width:60%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;margin-bottom:10px}
+    .meishi{width:80%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;margin-bottom:10px}
     .meishi_one{display:flex;align-items:center}
     .meishi a img{width:50%;height:50%}
     .but{
@@ -307,7 +307,7 @@ export default {
     .caipu div+div{margin-right:13px}
     .caipu h5{margin-bottom:10px}
     .hh{margin-top:36px}
-    .detail{width:60%;margin:0 auto;display:flex;justify-content:space-between!important}
+    .detail{width:80%;margin:0 auto;display:flex;justify-content:space-between!important}
     .detail .zuo{display:flex;flex-direction:column;margin-top:20px}
     .zuo_a{display:flex;flex-wrap:wrap;overflow:hidden;height:80%; margin-bottom: 1rem}
     .zuo_a img{width:60%;height:90%}
@@ -337,7 +337,7 @@ export default {
     .you_xx .one img{width:100%;height:80%}
     .you_xx .one img:hover{border:1px solid #ff6767}
     .you_xx .one a:hover{color:#ff6767}
-    @media screen and (max-width: 1475px) {
+    @media screen and (max-width: 1000px) {
         .zuo_a div:last-child{display:none;}
         .zuo_a div:first-child{width:100%;}
         .you_yy{margin-top:500px!important}

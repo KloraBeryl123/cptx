@@ -14,7 +14,7 @@
                   <a style="color:white">登录</a>
                 </button>
                 <div class="belowinputs">
-                    <input v-model="rem" type="checkbox" style="position:absolute;bottom:5.22rem;margin-left:-0.4rem;">  
+                    <input v-model="rem" type="checkbox" style="position:absolute;bottom:5.55rem;margin-left:-0.4rem;">  
                     <p style="display:inline-block; font-size:13px;margin-left:0.7rem;margin-top:0.5rem">记住手机和密码</p>
                     <router-link to="Reupwd"><a style="display:inline-block;margin-left:6.5rem">忘记密码?</a></router-link>
                 </div>
