@@ -376,13 +376,15 @@ CREATE TABLE cptx_user(
   phone VARCHAR(16) not NULL,
   avatar VARCHAR(128),        #头像图片路径
   user_name VARCHAR(32),      #用户名，如王小明
-  gender INT 
+  gender INT,
+  home VARCHAR(32),
+  sign VARCHAR(128)
 );
-INSERT INTO cptx_user VALUES(NULL, 'Tom', '123456', '1232312@qq.com', '15611112222', 'public/img/1.png', '齐', '1');
-INSERT INTO cptx_user VALUES(NULL, 'Mary', '123456', '2232342@qq.com', '15633334444', 'public/img/2.png', '楚', '1');
-INSERT INTO cptx_user VALUES(NULL, 'Klora', '123456', '3434534@qq.com', '15655556666', 'public/img/3.png', '燕', '0');
-INSERT INTO cptx_user VALUES(NULL, 'Beryl', '123456', '3435t454@qq.com', '15677778888', 'public/img/4.png', '韩', '0');
-INSERT INTO cptx_user VALUES(NULL, 'Jerry', '123456', '978564r5@qq.com', '15699990000', 'public/img/5.png', '宋', '1');
+INSERT INTO cptx_user VALUES(NULL, 'Tom', '123456', '1232312@qq.com', '15611112222', 'public/img/1.png', '齐', '1','','');
+INSERT INTO cptx_user VALUES(NULL, 'Mary', '123456', '2232342@qq.com', '15633334444', 'public/img/2.png', '楚', '1','','');
+INSERT INTO cptx_user VALUES(NULL, 'Klora', '123456', '3434534@qq.com', '15655556666', 'public/img/3.png', '燕', '0','','');
+INSERT INTO cptx_user VALUES(NULL, 'Beryl', '123456', '3435t454@qq.com', '15677778888', 'public/img/4.png', '韩', '0','','');
+INSERT INTO cptx_user VALUES(NULL, 'Jerry', '123456', '978564r5@qq.com', '15699990000', 'public/img/5.png', '宋', '1','','');
 
 
 
@@ -524,7 +526,8 @@ Insert into content4 values
 create table content5(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	title VARCHAR(255),
-	arthor VARCHAR(255),	
+	arthor VARCHAR(255),
+	material  VARCHAR(255),
 	img_url VARCHAR(500)
 );
 Insert into content5 values
@@ -680,6 +683,34 @@ Insert into content8 values
 (null,"五花肉炖干笋","蜜儿Mier","/img/content8/62.jpg"),
 (null,"什锦杂菜米粉","蜜儿Mier","/img/content8/63.jpg"),
 (null,"肉末鸡蛋羹","蜜儿Mier","/img/content8/64.jpg");
+
+create table cp(
+	id int primary key auto_increment,
+	title varchar(255),
+	subtitle varchar(255),
+	detail varchar(255),
+	img varchar(255)
+);
+insert into cp values
+(null,"鸡蛋肉饼","宸·羽","原料：土鸡蛋、肉、葱花、盐、酱油、蚝油、淀粉、鸡精、胡椒粉、油、料酒。","01.jpg"),
+(null,"排骨炖腐竹","宸·羽","原料：排骨、腐竹、香菇、蒜、姜、小洋葱、盐、酱油、老抽、黄豆酱、糖、料酒。","02.jpg"),
+(null,"清蒸排骨","零下一度0511","原料：肋排、盐、鸡精、生抽、胡椒粉、生粉、姜、蒜。","03.jpg"),
+(null,"可乐鸡翅","原来你也在这里！","原料：鸡翅、可乐、姜、芝麻、生抽。","04.jpg"),
+(null,"酱汁杏鲍菇","青葱食味","原料：杏鲍菇、小葱、蒜、生抽、老抽、蚝油、白糖、淀粉、水。","05.jpg"),
+(null,"榴莲菠萝披萨","吾爱烘焙","原料：榴莲、菠萝、马苏里拉芝士、面粉、蛋液、酵母、牛奶、黄油、盐、糖。","06.jpg"),
+(null,"懒人面包","宸·羽","原料：高筋面粉、鸡蛋、牛奶、玉米油、糖、酵母粉、蛋黄、白芝麻、玉米油。","07.jpg"),
+(null,"酱牛肉","宸·羽","原料：牛腱子、卤包料、酱油、柱候酱、老抽、姜、冰糖、蒜末、香油、香醋、小米椒。","08.jpg"),
+(null,"鲍鱼红烧肉","小耿妈妈","原料：五花肉、小鲍鱼、生姜、葱、蚝油、生抽、老抽、啤酒、冰糖。","10.jpg"),
+(null,"木耳拌苦瓜","原来你也在这里！","原料：木耳、苦瓜、干红辣椒、蒜、生抽、醋、盐、糖、花椒、植物油。","9.jpg"),
+(null,"红烧肘子","青葱食味","原料：猪肘子、冰糖、葱、姜、干辣椒。","11.jpg"),
+(null,"酱香豆干","吾爱烘焙","原料：黄皮豆干、泡椒、酱油、老抽、料酒、十三香、黄豆酱、糖、熟芝麻、葱花。","12.jpg"),
+
+(null,"黄焖鸡","宸·羽","原料：母鸡、黄焖鸡酱料、土豆、洋葱、料酒、冰糖、茶树菇、大蒜头、姜、红米椒、青椒、鸡精、胡椒粉。","13.jpg"),
+(null,"家常炒茄子","宸·羽","原料：茄子、辣椒、大蒜头、葱、油、盐、鸡精、蚝油、生抽。","14.jpg"),
+(null,"芦笋炒牛肉","零下一度0511","原料：牛肉、芦笋、辣椒、大蒜头、姜、淀粉、油、盐、鸡精、蚝油、生抽、胡椒粉、米酒。","15.jpg"),
+(null,"红虾意面","原来你也在这里！","原料：意大利面、阿根廷红虾、橄榄油、盐、白糖、黑胡椒粉、番茄、洋葱、辣椒、胡萝卜、大蒜。","16.jpg"),
+(null,"芒果慕斯蛋糕","青葱食味","原料：金龙鱼低筋面粉、鸡蛋、细砂糖、水、玉米油、芒果泥、淡奶油、吉利丁粉、芒果粒、吉利丁片、温水、芒果泥。","17.jpg"),
+(null,"意式西瓜奶冻","吾爱烘焙","原料：西瓜汁、淡奶油、牛奶、白砂糖、吉利丁片。","18.jpg");
 
 
 

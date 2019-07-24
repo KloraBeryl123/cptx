@@ -148,7 +148,7 @@ export default {
         {src:require("../../assets/dianzan1.png")},
         {src:require("../../assets/dianzan1.png")}
       ],
-      innerWidth:window.innerWidth*0.69,//初始时，设置默认的宽度为当前窗口的宽度
+      innerWidth:window.innerWidth*1,//初始时，设置默认的宽度为当前窗口的宽度
       i:0,//当前播放的是第几张图片
       ulClass:{//定义所有图片的容器div上是否有transition 
         hasTrans:true//在css中提前定义好的样式类，其中含有transition属性
@@ -158,8 +158,8 @@ export default {
         {src:require("../../assets/01.jpg")},
         {src:require("../../assets/02.jpg")},
         {src:require("../../assets/03.jpg")},
-        {src:require("../../assets/04.jpg")},
-        {src:require("../../assets/05.jpg")},
+        // {src:require("../../assets/04.jpg")},
+        // {src:require("../../assets/05.jpg")},
         {src:require("../../assets/06.jpg")}
       ],
       timer:null,
@@ -167,7 +167,7 @@ export default {
   },
   created(){
       window.addEventListener("resize",()=>{
-        this.innerWidth=window.innerWidth*0.69;
+        this.innerWidth=window.innerWidth*1;
       })
      this.start();
   },
@@ -264,7 +264,7 @@ export default {
     }
     .carousel>.carousel-inner>.carousel-item img{
       width:60%;
-      height:400px;
+      height:530px;
     }
     /*重写指示符的样式*/
     .carousel-indicators{
@@ -294,13 +294,13 @@ export default {
       top:40%;
       display:block;
       position:absolute;
-      left:300px;
+      left:340px;
       text-align:center;
       vertical-align:middle;
       
       }
     .carousel-control-next{
-      left:1270px;
+      left:1440px;
     }
     .carousel-control-prev:hover,.carousel-control-next:hover{
       background-color:rgba(95, 95, 92, 0.3);
@@ -308,11 +308,11 @@ export default {
     .carousel-control-prev-icon>img,.carousel-control-next-icon>img{width:30px!important;height:30px;display:block;color:black;position:absolute;top:25%;left:18%}
     .carousel-control-next-icon>img{left:18%}
     .zhu{position:relative;}
-    .daquan{position:absolute;top:0;left:0;height:99%;width:22%;background:rgba(0,0,0,.2)}
+    .daquan{position:absolute;top:0;left:0;height:99%;width:22%;background:rgba(0,0,0,.2);padding-top:3rem}
     .daquan ul{list-style:none;width:80%;height:60px;}
     .sett1{margin-top:45px;margin-left:-20px;font-size:18px;color:#fff;}
     .sett2,.sett3,.sett4,.sett5{margin-top:8px;margin-left:-20px;font-size:18px;color:#fff}
-    .daquan a{display:flex;display:block;width:100%;margin-left:0;text-align:center;line-height:60px;background-image:"../../../public/img/icon.png"!important}
+    .daquan a{display:flex;display:block;width:100%;margin-left:0;text-align:center;line-height:90px;background-image:"../../../public/img/icon.png"!important}
     .daquan a:hover{background:#f00}
     .zuo_one{display:flex;justify-content:space-around;flex-wrap:wrap;position:absolute;top:0;left:22%;width:400px;height:99%;background:#fff;}
     /*.zuo_one_s{display:flex;flex-direction:column;height:40px;}

@@ -421,8 +421,8 @@ import SIdentify  from './SIdentify'
     z-index: 0;
     top:44%;
     left: 50%;
-    margin-left: -265px;
-    margin-top: -200px;
+    margin-left: -235px;
+    margin-top: -210px;
     list-style: none;
   }
 .ivu-tabs-nav-wrap {

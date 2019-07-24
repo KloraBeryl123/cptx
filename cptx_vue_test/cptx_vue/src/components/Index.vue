@@ -1,11 +1,12 @@
 <template>
 <div>
-    <aheader style=""></aheader>
+    <aheader style=" position:absolute;z-index:999;width:100%"></aheader>
+    <carousel></carousel>
     <div class="main">
         
-        <div class="container">
+         <!-- <div class="container">
             
-            <div class="left">
+           <div class="left">
                 <a href="#"><img src="../../public/img/logo.png" alt=""></a>
                 <ul class="first-ui">
                     <li><a href="">首页</a></li>
@@ -17,16 +18,17 @@
                     <li><a href="">社区</a></li>
                     <li><a href="">话题</a></li>
                 </ul>
-            </div>
+            </div> 
             <div class="right">
                 <input class="right_left" type="text" v-model="foods">
-                <!-- <a class="btn" title="搜索" @click="login()">
+                <a class="btn" title="搜索" @click="login()">
                     <img src="../assets/icon/sousuo.png" />
                     <span>搜索</span>
-                </a> --> <Input search placeholder="搜索" style="width:200px;position:absolute; top:5.8rem;right:18.5rem" focus/>
+                </a> <Input search placeholder="搜索" style="width:200px;position:absolute; top:5.8rem;right:18.5rem" focus/>
             </div>
-        </div>
-        <carousel></carousel>
+        </div>-->
+        
+        <div >
         <div class="one_h">
             <div class="one_h_one">
                 <div class="one_w">
@@ -214,9 +216,9 @@
                 <div><a href="#">花鱼儿</a></div>
             </div>
         </div>
-        <lun></lun>
+        <!-- <lun></lun> -->
         <three></three>
-        <div class="part01">
+        <!-- <div class="part01">
             <div class="zuo">
                 <p><a href="">美食天下 - 让吃更美好！</a></p>
                 <ul>
@@ -266,8 +268,11 @@
         </div>
         <div class="part03">
             <p>版权所有 © 2004-2019 美食天下 保留所有权利 -  京公网安备 11010502031041号 / 京ICP证090244号 / 京ICP备10020153号</p>
-        </div>
-    </div>
+        </div> -->
+        
+    </div> </div>
+    <Footer style="margin-top:3rem;"></Footer>
+    
 </div>
     
 </template>
@@ -276,7 +281,8 @@ import Header from "./Header.vue"
 import carousel from "./Carousel/Carousel.vue"
 import lun from "./Carousel/Lun.vue"
 import three from "./Carousel/Three.vue"
-
+import Footer from "./Footer.vue"
+import Bdmap from "./Bdmap.vue"
 export default {
     data(){
         return{
@@ -295,6 +301,8 @@ export default {
         lun,
         "aheader":Header,
         three,
+        Footer,
+        Bdmap,
         
     }
     
@@ -303,8 +311,9 @@ export default {
 <style scoped>
     /*父级元素*/
     .main{
-        width:70%;
-        margin:25px auto;
+        width:85%;
+       margin:0 auto;
+    
     } 
     .container{
         width:100%;

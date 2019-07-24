@@ -1,6 +1,6 @@
 <template>
 <div class="form-group">
-    <img src="../assets/lmbg.jpg" style="position:absolute;z-index:-1;width:100%;height:75rem;opacity:0.9">
+    <img src="../assets/lmbg.jpg" style="position:absolute;z-index:-1;width:100%;height:73rem;opacity:0.9">
      <div > 
         <div>
             <h1 style="color:white">找回密码</h1>

@@ -8,7 +8,6 @@ import SIdentify from './components/SIdentify.vue'
 import Header from './components/Header.vue'
 import Index from './components/Index.vue'
 import Qq from './components/Qq.vue'
-import test from './components/test.vue'
 import Bdmap from './components/Bdmap.vue'
 import Footer from './components/Footer.vue'
 /yyy/
@@ -25,7 +24,9 @@ import Cp from "./components/Cp.vue"
 //dd
 import Publish from './views/Publish.vue'
 import Home from './Home.vue'
+//
 
+import test from './components/test.vue'
 /* 可引全局组件 */
 Vue.use(Router)
 
@@ -38,7 +39,6 @@ export default new Router({
     {path:'/Header',component:Header},
     {path:'/Index',component:Index},
     {path:'/Qq',component:Qq},
-    {path:'/test',component:test},
     {path:'/Bdmap',component:Bdmap},
     {path:'/Footer',component:Footer},
     //yyy
@@ -54,5 +54,8 @@ export default new Router({
     //
     {path:'/Publish',component:Publish},
     {path:'/Home',component:Home},
+    //
+
+    {path:'/test',component:test},
   ]
 })

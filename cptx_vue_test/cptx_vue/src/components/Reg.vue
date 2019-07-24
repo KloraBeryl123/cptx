@@ -60,7 +60,7 @@ export default {
 </script>
 <style scoped>
 .home-banner {
-  height: 800px;
+  height: 750px;
   position: relative;
   z-index:-3;
 }
