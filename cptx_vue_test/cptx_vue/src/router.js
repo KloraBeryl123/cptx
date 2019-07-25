@@ -6,6 +6,7 @@ import Reg from './components/Reg.vue'
 import Reupwd from './components/Reupwd.vue'
 import SIdentify from './components/SIdentify.vue'
 import Header from './components/Header.vue'
+import Header2 from './components/Header2.vue'
 import Index from './components/Index.vue'
 import Qq from './components/Qq.vue'
 import Bdmap from './components/Bdmap.vue'
@@ -18,6 +19,7 @@ import content3 from "./components/food/content3.vue"
 import content6 from "./components/food/content6.vue"
 import content5 from "./components/food/content5.vue"
 import index2 from "./components/food/index2.vue"
+import index3 from "./components/food/index3.vue"
 //111
 import Second from "./components/Carousel/Second.vue"
 import Cp from "./components/Cp.vue"
@@ -37,6 +39,7 @@ export default new Router({
     {path:'/Reupwd',component:Reupwd},
     {path:'/SIdentify',component:SIdentify},
     {path:'/Header',component:Header},
+    {path:'/Header2',component:Header2},
     {path:'/Index',component:Index},
     {path:'/Qq',component:Qq},
     {path:'/Bdmap',component:Bdmap},
@@ -49,6 +52,7 @@ export default new Router({
     {path:'/content1',component:content1},
     {path:'/content',component:content}, 
     {path:'/index2',component:index2}, 
+    {path:'/index3',component:index3}, 
     {path:"/Second",component:Second},
     {path:"/Cp",component:Cp},
     //

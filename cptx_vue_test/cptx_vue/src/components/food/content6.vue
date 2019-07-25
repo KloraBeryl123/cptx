@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="min">
-        <div class="min1">
+        <!-- <div class="min1">
             <a style="color:red" href="#">最新推荐</a>
             <a href="#">最新发布</a>
             <a href="#">热菜</a>
@@ -11,26 +11,28 @@
             <a href="#">小吃</a>
             <a href="#">西餐</a>
             <a href="#">自制食材</a>
-        </div>
-        <div class="min2">
+        </div> -->
+        <!-- <div class="min2">
         <a href="#" style="font-size:16px !important;color:#666;float:right;">全部分类</a>
-    </div>
+    </div> -->
     <div class="min3"></div>
     </div>
     <div class="tab1-div">
-    <ul>
+    <ul class="tab1-ul">
       <li v-for="(item,i) of list" :key="i">
         <div class="two-light">
-            <img  :src="'http://127.0.0.1:3000'+item.img_url" style="display:block;width:230px;height:230px;border-radius:2px;">
+            <img  :src="'http://127.0.0.1:3000'+item.img_url" style="display:block;border-radius:2px;">
         </div>
         <span style="font-size:17px">{{item.title}}</span>
       <br/>
       <span><img :class="shows==true?'red':''" @click="handleClick" style="color:red" src="../../../public/img/shoucan.png" alt=""></span>  
-      </li>
-    </ul>   
+      </li>  
+    </ul>
     </div>
     
-    <a href="#" style="position:relative" @click="loadMore" class="al"><span style="position:absolute;top:7px">加载数据</span></a>   
+    <a href="#" style="position:relative" @click="loadMore" class="al">
+      <span style="position:absolute;top:7px; ">
+    加载数据</span></a>   
     
 </div>
 </template>
@@ -83,25 +85,28 @@ export default {
 .min{width:60%;margin:0 auto;margin-top:10px;border-bottom:1px solid #ddd}
 .min3{content:"";display:block;clear:both;}
 .min1  a{font-size:20px;line-height:24px;text-decoration:none;color:#666;float:left;margin-right:15px};
-.two-light{width:230px;height:230px;}
+.tab1-ul{width:60%;margin:0 auto;}
+.tab1-ul li{width:23.3%;}
+.two-light img{width:100%}
 .two-light img:hover{transform:scale3d(1.1, 1.1, 1);transition:all .8s}
 .al{
     display: inline-block;
     border-radius: 5px;
     text-align: center;
     font-size: 20px !important;
-    background-color: #f8f8f8;
+    background-color: #E08376;
     cursor: pointer;
-    color: #ff6767;
+    color: #fff;
     margin-top:10px;    
-    width:60%;height:44px;
-    margin-left:330px;
+    width:30%;height:44px;
+    margin-left:573px;
+    padding-right:5.5rem;
     }
-.tab1-div{width:60%;margin:0 auto;margin-top:10px;justify-content:space-around}
-.tab1-div>ul{list-style:none;padding:0}
-.tab1-div ul li{text-align:center;}
-.tab1-div ul li span{color:#999;font-size:12px}
-.tab1-div ul li{margin-left:8px;margin-right:7px}
+.tab1-div{width:60%;margin:0 auto;margin-top:10px;}
+.tab1-div>ul{list-style:none;padding:0;}
+.tab1-div ul li{text-align:center}
+.tab1-div ul li span{color:#999;font-size:12px;margin-left:4px}
+.tab1-div ul li{margin-right:15px}
 .tab1-div ul li{float:left}  
 
 .two-light img:hover{transform:scale3d(1.1, 1.1, 1);transition:all .8s}

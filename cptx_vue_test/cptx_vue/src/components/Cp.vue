@@ -1,19 +1,20 @@
 <template>
     <div>
+        <header2></header2> 
         
-            <div class="meishi">
+            <!-- <div class="meishi">
                 <div class="meishi_one">
-                    <!-- <a href="#"><img src="../../public/img/logo.png" alt=""></a>   -->
+                    <a href="#"><img src="../../public/img/logo.png" alt=""></a>   
                    
                     <ul class="meishi-ul">
                         <li v-for="(elem,i) of list" :key="i"><a href="">{{elem}}</a></li>
                     </ul>  
                 </div>      
                 <div class="input">
-                    <!-- <input @keyup.13="search"  v-model="keywords" type="text">          -->
+                     <input @keyup.13="search"  v-model="keywords" type="text">          
                     <Input search placeholder="搜索" style="width:200px;float:right;margin-left:14px" focus/>
                 </div>
-            </div> 
+            </div>  -->
             <!-- <div class="wrap">
                 <ul class="ul2">
                     <div>
@@ -92,7 +93,9 @@
                             <p>{{item.detail}}</p>
                         </div>
                     </div>
-                    <el-button style="width:60%;margin-top:2rem;background-color:#ec5541;color:white"  @click="loadMore">换一批</el-button>
+                    <el-button 
+                    style="width:24%;margin-top:2rem;background-color:#ec5541;color:white;"  
+                    @click="loadMore">换一批</el-button>
                 </div>
                 <div class="you">
                     <div class="containers" @mouseleave="start" @mouseenter="stop">
@@ -163,6 +166,8 @@
 
 </template>
 <script>
+
+import Header2 from "./Header2"
 import Footer from "./Footer"
 export default {
     data(){
@@ -189,6 +194,7 @@ export default {
     },
     components:{
         "footera":Footer,
+        "header2":Header2,
     },
     created() {
         this.loadMore();
@@ -307,7 +313,7 @@ export default {
     .caipu div+div{margin-right:13px}
     .caipu h5{margin-bottom:10px}
     .hh{margin-top:36px}
-    .detail{width:80%;margin:0 auto;display:flex;justify-content:space-between!important}
+    .detail{width:80%;margin:0 auto;display:flex;justify-content:space-between!important;margin-top:2rem;}
     .detail .zuo{display:flex;flex-direction:column;margin-top:20px}
     .zuo_a{display:flex;flex-wrap:wrap;overflow:hidden;height:80%; margin-bottom: 1rem}
     .zuo_a img{width:60%;height:90%}

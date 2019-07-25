@@ -22,7 +22,7 @@
 				<dt>电商产品</dt>
 
 				<dd>
-					<a  href="#">云小店</a>
+					<a  href="#">菜谱天下</a>
 				</dd>
 
 				<dd>
@@ -103,7 +103,7 @@
 			</dl>
 			<!--关注商之云-->
 			<dl class="wx">
-				<dt>关注我们</dt>
+				<dt>关注菜谱天下</dt>
 				<dd>
 					<img src="../assets/qqewm.png">
 				</dd>

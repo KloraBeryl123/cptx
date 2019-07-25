@@ -303,7 +303,7 @@ server.get("/five",(req,res)=>{
   pool.query(sql,[offset,ps],(err,result)=>{
     if(err)throw err;
     obj.data=result;
-    console.log(result);
+    //console.log(result);
     var sql="select count(*) as c from cp";
     pool.query(sql,(err,result)=>{
       if(err){throw err;}

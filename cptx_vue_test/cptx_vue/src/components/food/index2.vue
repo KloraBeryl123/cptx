@@ -1,22 +1,22 @@
 <template>
 <div>
-<header></header>
-    <div class="meishi">
+    <!-- <div class="meishi">
         <a href="#"><img src="../../assets/logo.png" alt=""></a>  
         <button class="but">菜谱</button>
         <ul class="meishi-ul">
             <li v-for="(elem,i) of list" :key="i">{{elem}}</li>
         </ul>        
        <div class="input">
-        <!-- <input @keyup.13="search"  v-model="keywords" type="text">          -->
+        <input @keyup.13="search"  v-model="keywords" type="text">        
         <Input search placeholder="搜索" style="width:200px;float:right;margin-left:14px" focus/>
        </div> 
-    </div>    
-    <div class="wrap">
+    </div>     -->
+    <header2></header2>
+    <!-- <div class="wrap">
         <ul class="ul2">
             <li v-for="(elem,i) of list2" :key="i" ><a href="#" style="text-decoration:none" @focus=on @blur=out>{{elem}}</a></li>
             
-            <li style="padding-left:180px;position:relative" ><a href="#" style="text-decoration:none"  @mouseenter="enter()">浏览全部菜单</a><img style="padding-left:3px" src="../../assets/arrow2.png" alt="">              
+            <li style="padding-left:150px;position:relative" ><a href="#" style="text-decoration:none"  @mouseenter="enter()">浏览全部菜单</a><img style="padding-left:3px" src="../../assets/arrow2.png" alt="">              
             </li>
             <div class="caipu" @mouseleave="leave()" v-show="num==0">
              <div>
@@ -104,7 +104,8 @@
          </div>    
 
         </ul>    
-    </div>    
+    </div> -->
+    <content3></content3>    
     <ul class="ul3" style="padding:0;margin-top:12px;">
       <li v-for="(item,i) of list3" :key="i">
       <a :title="item.title" href="#" target="_blank"><img class="ul3-img" :src="'http://127.0.0.1:3000'+item.img_url" style="display: block;"></a>
@@ -113,12 +114,15 @@
       </li>
     </ul> 
      <content6></content6>
-
+    <Footer ></Footer>
 </div>
 </template>
 <script>
 import header from './Header.vue'
 import content6 from './content6.vue'
+import content3 from './content3.vue'
+import Header2 from "../Header2.vue"
+import Footer from "../Footer"
     export default {
         data(){//当前组件共享的数据
             return {
@@ -160,7 +164,10 @@ import content6 from './content6.vue'
         },
         components:{
        content6,
-       header
+       header,
+       content3,
+       Header2,
+       Footer,
         
     }
        
@@ -184,7 +191,7 @@ import content6 from './content6.vue'
 .meishi-ul li{margin-left:20px;}
 .input{margin-top:20px !important;}
 
-.ul2{list-style:none;display:flex;border-bottom:1px solid #ff6767;border-top:1px solid #ff6767;font-size:17px;justify-content:space-between;}
+.ul2{list-style:none;display:flex;border-bottom:1px solid #ff6767;border-top:1px solid #ff6767;font-size:17px;justify-content:space-between;margin-top:-26px;}
 .ul2 li+li{margin-left:22px}
 .ul2 li a{color:#000;}
 .ul2{width:60%;margin:0 auto;display:flex}
