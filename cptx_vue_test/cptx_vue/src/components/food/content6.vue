@@ -23,14 +23,14 @@
         <div class="two-light">
             <img  :src="'http://127.0.0.1:3000'+item.img_url" style="display:block;border-radius:2px;">
         </div>
-        <span style="font-size:17px">{{item.title}}</span>
+        <span style="font-size:17px;margin-top:8px;display:inline-block">{{item.title}}</span>
       <br/>
-      <span><img :class="shows==true?'red':''" @click="handleClick" style="color:red" src="../../../public/img/shoucan.png" alt=""></span>  
+      <span ><img :class="shows==true?'red':''" @click="handleClick" style="color:red;margin: 3px 0 4px 0;" src="../../../public/img/shoucan.png" alt=""></span>  
       </li>  
     </ul>
     </div>
     
-    <a href="#" style="position:relative" @click="loadMore" class="al">
+    <a href="javascript:;" style="position:relative" @click="loadMore" class="al">
       <span style="position:absolute;top:7px; ">
     加载数据</span></a>   
     
@@ -50,7 +50,7 @@ export default {
   },
   methods: {      
       loadMore(){
-          var url="food";         
+          var url="you";         
           this.pno++;
         // console.log(this.pno++);
         //创建参数对象
@@ -82,19 +82,24 @@ export default {
 </script>
 
 <style scoped>
-.min{width:60%;margin:0 auto;margin-top:10px;border-bottom:1px solid #ddd}
+.min{width:75%;margin:0 auto;margin-top:10px;border-bottom:1px solid #ddd}
 .min3{content:"";display:block;clear:both;}
 .min1  a{font-size:20px;line-height:24px;text-decoration:none;color:#666;float:left;margin-right:15px};
 .tab1-ul{width:60%;margin:0 auto;}
 .tab1-ul li{width:23.3%;}
-.two-light img{width:100%}
+.two-light{
+  width:280px;
+  height: 280px;
+  overflow: hidden;
+}
+.two-light img{width:100%;}
 .two-light img:hover{transform:scale3d(1.1, 1.1, 1);transition:all .8s}
 .al{
     display: inline-block;
     border-radius: 5px;
     text-align: center;
     font-size: 20px !important;
-    background-color: #E08376;
+    background-color: #db432e;
     cursor: pointer;
     color: #fff;
     margin-top:10px;    
@@ -102,11 +107,11 @@ export default {
     margin-left:573px;
     padding-right:5.5rem;
     }
-.tab1-div{width:60%;margin:0 auto;margin-top:10px;}
-.tab1-div>ul{list-style:none;padding:0;}
+.tab1-div{width:75%;margin:0 auto;margin-top:2rem;}
+.tab1-div>ul{list-style:none;padding:0;margin-left: 2rem}
 .tab1-div ul li{text-align:center}
 .tab1-div ul li span{color:#999;font-size:12px;margin-left:4px}
-.tab1-div ul li{margin-right:15px}
+.tab1-div ul li{margin-right:20px}
 .tab1-div ul li{float:left}  
 
 .two-light img:hover{transform:scale3d(1.1, 1.1, 1);transition:all .8s}

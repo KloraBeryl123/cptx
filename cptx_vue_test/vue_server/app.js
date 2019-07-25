@@ -152,34 +152,20 @@ server.get("/tupian",( req,res)=>{
   });
 })
 
-server.get("/food1",( req,res)=>{
-  var sql="select id,title,img_url from content6";
-  pool.query(sql,(err,result)=>{
-    if(err)throw err;
-    res.send(result);
-  });
-})
 
-server.get("/food2",( req,res)=>{
-  var sql="select id,title,img_url from content7";
-  pool.query(sql,(err,result)=>{
-    if(err)throw err;
-    res.send(result);
-  });
-})
 
-server.get("/food",(req,res)=>{
+server.get("/you",(req,res)=>{
   //1:参数 pno pageSize 页码 页大小
   var pno = req.query.pno;
   var ps = req.query.pageSize;
   //2:默认值 
   if(!pno){pno=1} //!pno 如果没有就是默认为1
-  if(!ps){ps=8}
+  if(!ps){ps=32}
  //分页查询，先传入两个参数，pno,pagesize;
   //2:创建两条sql语句执行 放在一起执行
   var obj = {code:1,msg:"查询成功"};//先创建一个obj对象。
   var sql = " SELECT id,title,arthor,img_url";
-  sql+=" FROM content5";
+  sql+=" FROM content8";
   sql+=" LIMIT ?,?";
   var offset = (pno-1)*ps;
   ps = parseInt(ps);//ps参数必须为整型
@@ -188,7 +174,7 @@ server.get("/food",(req,res)=>{
     if(err)throw err;
     //console.log(result);
     obj.data = result;//把result这个数组放在obj中result为一页的数据，为四个。
-    var sql="SELECT count(*) as c from content5";    //
+    var sql="SELECT count(*) as c from content8";    //
     pool.query(sql,(err,result)=>{
      if(err) throw err;//result是查询的总行数
      var pc=Math.ceil(result[0].c/ps);//result:{c:43}
@@ -198,64 +184,7 @@ server.get("/food",(req,res)=>{
   })
  });
 
- server.get("/food1",(req,res)=>{
-  //1:参数 pno pageSize 页码 页大小
-  var pno = req.query.pno;
-  var ps = req.query.pageSize;
-  //2:默认值 
-  if(!pno){pno=1} //!pno 如果没有就是默认为1
-  if(!ps){ps=8}
- //分页查询，先传入两个参数，pno,pagesize;
-  //2:创建两条sql语句执行 放在一起执行
-  var obj = {code:1,msg:"查询成功"};//先创建一个obj对象。
-  var sql = " SELECT id,title,arthor,img_url";
-  sql+=" FROM content6";
-  sql+=" LIMIT ?,?";
-  var offset = (pno-1)*ps;
-  ps = parseInt(ps);//ps参数必须为整型
-  //3:
-  pool.query(sql,[offset,ps],(err,result)=>{//result 查询的结果
-    if(err)throw err;
-    //console.log(result);
-    obj.data = result;//把result这个数组放在obj中result为一页的数据，为四个。
-    var sql="SELECT count(*) as c from content6";    //
-    pool.query(sql,(err,result)=>{
-     if(err) throw err;//result是查询的总行数
-     var pc=Math.ceil(result[0].c/ps);//result:{c:43}
-     obj.pc=pc;//pc总页数，也放到obj中
-     res.send(obj);                                      
-    })
-  })
- });
- server.get("/food2",(req,res)=>{
-  //1:参数 pno pageSize 页码 页大小
-  var pno = req.query.pno;
-  var ps = req.query.pageSize;
-  //2:默认值 
-  if(!pno){pno=1} //!pno 如果没有就是默认为1
-  if(!ps){ps=8}
- //分页查询，先传入两个参数，pno,pagesize;
-  //2:创建两条sql语句执行 放在一起执行
-  var obj = {code:1,msg:"查询成功"};//先创建一个obj对象。
-  var sql = " SELECT id,title,arthor,img_url";
-  sql+=" FROM content7";
-  sql+=" LIMIT ?,?";
-  var offset = (pno-1)*ps;
-  ps = parseInt(ps);//ps参数必须为整型
-  //3:
-  pool.query(sql,[offset,ps],(err,result)=>{//result 查询的结果
-    if(err)throw err;
-    //console.log(result);
-    obj.data = result;//把result这个数组放在obj中result为一页的数据，为四个。
-    var sql="SELECT count(*) as c from content7";    //
-    pool.query(sql,(err,result)=>{
-     if(err) throw err;//result是查询的总行数
-     var pc=Math.ceil(result[0].c/ps);//result:{c:43}
-     obj.pc=pc;//pc总页数，也放到obj中
-     res.send(obj);                                      
-    })
-  })
- });
+
 
 //晓燕
 

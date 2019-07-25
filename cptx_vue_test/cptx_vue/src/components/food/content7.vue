@@ -224,13 +224,9 @@
                         </ul>                   
                     </div>
             </div>
-            </div>
+</div>
             
 
-    </div>
-
-
-</div> 
 </template>
 <script>
 import s09 from '../Detail.vue'

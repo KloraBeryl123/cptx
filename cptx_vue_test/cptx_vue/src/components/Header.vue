@@ -29,10 +29,23 @@
       <el-menu-item index="3-2">发菜谱</el-menu-item>
       <el-menu-item index="3-3">发日志</el-menu-item>    
     </el-submenu>
+  <el-submenu index="8" style="float:right">
+      <template slot="title">
+        <img src="../assets/denglu.png">
+        <span style="font-size:12px;margin-left:5px"  @click="toreg">{{dlzc}}</span>
+      </template>
+      <el-menu-item index="8-1" :disabled="disabled" @click="tcdl1">{{tcorno}}</el-menu-item>   
+    </el-submenu>
 
-    <el-menu-item index="8" style="float:right">
-      <template slot="title"><img slot="icon" src="../assets/denglu.png"><router-link to="Reg"><a href="#" target="_blank" style="text-decoration:none;font-size:8px;margin-left:5px">登录/注册</a></router-link></template>
-    </el-menu-item>
+    <!-- <el-menu-item index="8" style="float:right">
+      <template slot="title"><img slot="icon" src="../assets/denglu.png">
+      <router-link to="Reg">
+        <a href="#" target="_blank" style="text-decoration:none;font-size:8px;margin-left:5px">
+          {{randl}}测试
+        </a>
+      </router-link>
+      </template>
+    </el-menu-item> -->
 </el-menu>
 
      </div>      
@@ -45,10 +58,29 @@
     export default {
         data(){//当前组件共享的数据
             return {
-                activeIndex:'1'
+                activeIndex:'1',
+                dlzc:"登陆/注册",
+                tcorno:"",
+                disabled:true,
             }//数据
         },
-      
+        methods:{
+          toreg1(){
+              this.$router.push("/Reg");
+            },
+            tcdl1(){
+               this.$router.push("/Reg");
+            }
+        },
+         beforeMount() {
+          var uphone= sessionStorage.getItem("uphone");
+          console.log(uphone)
+          if(uphone!==null){
+            this.dlzc=uphone;
+            this.disabled=false;
+            this.tcorno="退出登录"
+          }
+        },
         
         
     }

@@ -108,13 +108,17 @@
     <content3></content3>    
     <ul class="ul3" style="padding:0;margin-top:12px;">
       <li v-for="(item,i) of list3" :key="i">
-      <a :title="item.title" href="#" target="_blank"><img class="ul3-img" :src="'http://127.0.0.1:3000'+item.img_url" style="display: block;"></a>
+      <a :title="item.title" href="#" target="_blank">
+          <div style=" margin-top:1rem">
+              <img class="ul3-img" :src="'http://127.0.0.1:3000'+item.img_url" style="display: block;">
+          </div>
+      </a>
       <br/>
       <span>{{item.title}}</span>  
       </li>
     </ul> 
      <content6></content6>
-    <Footer ></Footer>
+    <Footer style="margin-top:4rem;"></Footer>
 </div>
 </template>
 <script>
@@ -168,15 +172,12 @@ import Footer from "../Footer"
        content3,
        Header2,
        Footer,
-        
     }
-       
-               
        }     
 </script>
 
 <style  scoped>
-.meishi{width:60%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;}
+.meishi{width:80%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;}
 .meishi a img{width:108px;height:60px}
 .but{
     width:60px;height:30px;
@@ -188,17 +189,17 @@ import Footer from "../Footer"
     margin-top:10px;      
     }
 .meishi-ul{list-style:none;display:flex;font-size:20px;color:#333;margin-top:15px}
-.meishi-ul li{margin-left:20px;}
+.meishi-ul li{margin-left:30px;}
 .input{margin-top:20px !important;}
 
 .ul2{list-style:none;display:flex;border-bottom:1px solid #ff6767;border-top:1px solid #ff6767;font-size:17px;justify-content:space-between;margin-top:-26px;}
 .ul2 li+li{margin-left:22px}
 .ul2 li a{color:#000;}
-.ul2{width:60%;margin:0 auto;display:flex}
+.ul2{width:80%;margin:0 auto;display:flex}
 
 .caipu{
     margin:0 auto;display:flex;background: #fff;
-    width: 60%;
+    width: 80%;
     position: absolute;
     left: 380px;
     top: 112px;
@@ -206,8 +207,8 @@ import Footer from "../Footer"
     justify-content:space-around;   
     box-shadow: 0 2px 3px #ddd;
     }
-.ul3{width:60%;margin:0 auto;list-style:none;display:flex}
-.ul3-img{width:50px;height:50px}
+.ul3{width:75%;margin:0 auto;list-style:none;display:flex}
+.ul3 img{width:50px;height:50px}
 .ul3 span{font-size:14px}
 .ul3{line-height:12px;text-align:center;justify-content:space-around}
    
