@@ -38,7 +38,7 @@ export default {
             uphone:"",
             identifyCodes: "1234567890",
             identifyCode: "",
-            ccode:"",//text框输入的验证码
+            code:"",//text框输入的验证码
             newpwd:"",
             newpwd2:"",
             disabled:true,
@@ -129,10 +129,10 @@ export default {
         verify(){
             // console.log(this.identifyCode);
             // console.log();
-            if(this.identifyCode==this.ccode){
+            if(this.identifyCode==this.code){
                 this.$Message.success("验证码输入正确");
             }else{
-                this.ccode="";
+                this.code="";
                 this.refreshCode();
                 this.$Message.warning("验证码输入错误");
             }
