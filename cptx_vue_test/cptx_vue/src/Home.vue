@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Header2 style="margin-bottom:2rem"></Header2>
         <el-tabs :tab-position="tabPosition" style="height: 100%;">
             <el-tab-pane label="会员中心"><members></members></el-tab-pane>
             <el-tab-pane label="菜谱"><menus></menus></el-tab-pane>
@@ -26,6 +27,7 @@ import Menu from './views/Menu.vue'
 import Daily from './views/Daily.vue'
 import Collect from './views/Collect.vue'
 import Personal from './views/Personal.vue'
+import Header2 from "./components/Header2.vue"
 export default {
     data(){
         return {
@@ -37,7 +39,8 @@ export default {
         "menus":Menu,
         "daily":Daily,
         "collect":Collect,
-        "personal":Personal
+        "personal":Personal,
+        Header2,
     },
 }
 </script>
@@ -46,13 +49,13 @@ html{
     height:1000px;
 }
  .el-tabs__item.is-active{
-     color:#d8316c !important;
+     color:red !important;
  }
 .el-tabs__item:hover{
-    color:#d8316c !important;
+    color:red !important;
 }
 .el-tabs__active-bar{
-    background-color:#d8316c !important;
+    background-color:red !important;
 }
 .el-tabs__nav{
     

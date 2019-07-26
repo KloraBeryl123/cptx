@@ -34,7 +34,4 @@ export default {
     display:flex;
     flex-direction:row-reverse;
 }
-.daily .el-button--danger{
-    background-color:#d8316c !important;
-    }
 </style>

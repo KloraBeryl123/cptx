@@ -1,6 +1,5 @@
 <template>
 <div>
- 
   <regtab></regtab>
   
 	<div id="home_banner" class="home-banner">
@@ -18,6 +17,7 @@
 </template>
 <script>
 import Regtab from "../components/Regtab";
+import Header from "./Header"
 export default {
 
   name: 'home-banner',
@@ -55,6 +55,7 @@ export default {
   },
   components:{
      "regtab":Regtab,
+     "headera":Header,
    },
 }
 </script>

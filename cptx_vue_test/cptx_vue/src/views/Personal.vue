@@ -91,9 +91,7 @@ export default {
 .persons{
     margin:25px 0 0 20px;;
 }
-.persons .el-button--danger{
-    background-color:#d8316c !important;
-}
+
 .set{
     font-size:17px;
     color:#888;
@@ -118,14 +116,14 @@ export default {
     margin-left:0%;
 }
 .persons .el-radio.is-bordered.is-checked{
-    border-color:#d8316c !important;
+    border-color:#F57272 !important;
 }
 .persons .el-radio__input.is-checked .el-radio__inner{
-    border-color:#d8316c !important;
-    background:#d8316c !important;
+    border-color:#F57272 !important;
+    background:#F57272 !important;
 }
 .persons .el-radio__input.is-checked+.el-radio__label{
-    color:#d8316c !important;
+    color:#F57272 !important;
 }
 
 </style>

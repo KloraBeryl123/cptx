@@ -29,25 +29,25 @@
         <ul><li v-text="item" :class="{active:idx==num}"></li></ul>
         </a>
     </div>
-    <div>
+    <!-- <div>
           <div class="zuo_one" v-show="num==0" @mouseleave="getNum(idx)">
             <div class="zuo_one_s">
             <ul>
                 <li>
                 <router-link to="/Second" :class="set[i]" v-for="(item,i) of series[0]" :key="i">{{item.title}}</router-link>
                 </li>
-                <!--<li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>-->
+                <li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>
               </ul>
               
-              <!--<a href="" class="set"  v-for="(item,i) of series[0]" :key="i" v-text="item.title"></a>
-              <a class="zuo_one_size" :class="set[i]" href=""  v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a>-->
+              <a href="" class="set"  v-for="(item,i) of series[0]" :key="i" v-text="item.title"></a>
+              <a class="zuo_one_size" :class="set[i]" href=""  v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a>
             </div>   
           </div>           
           <div class="zuo_one" v-show="num==1" @mouseleave="getNum(idx)">
             <div class="zuo_one_s">
               <ul>
                 <li><router-link to="/Second" :class="setta[i]" v-for="(item,i) of series[1]" :key="i" v-text="item.title"></router-link></li>
-                <!--<li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>-->
+                <li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>
               </ul>
             </div>   
           </div> 
@@ -55,7 +55,7 @@
             <div class="zuo_one_s">
               <ul>
                 <li><router-link to="/Second" :class="settaa[i]" v-for="(item,i) of series[2]" :key="i" v-text="item.title"></router-link></li>
-                <!--<li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>-->
+                <li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>
               </ul>
             </div>   
           </div> 
@@ -63,7 +63,7 @@
             <div class="zuo_one_s">
               <ul>
                 <li><router-link to="/Second" :class="settaa[i]" v-for="(item,i) of series[3]" :key="i" v-text="item.title"></router-link></li>
-                <!--<li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>-->
+                <li><a href="#" :class="set[i]" v-for="(item,i) of series[0]" :key="i" v-text="item.subtitle"></a></li>
                 <img :src="item.src" alt="" :class="set[i]"  v-for="(item,i) of series[3]" :key="i">              
               </ul>
             </div>   
@@ -73,7 +73,7 @@
               <router-link to="/Second"><img :src="item.src" alt="" :class="set[i]"  v-for="(item,i) of series[4]" :key="i"></router-link>
             </div>   
           </div>        
-    </div>
+    </div> -->
     
   </div>
 </template>
@@ -313,7 +313,7 @@ export default {
     .sett1{margin-top:45px;margin-left:-20px;font-size:18px;color:#fff;}
     .sett2,.sett3,.sett4,.sett5{margin-top:8px;margin-left:-20px;font-size:18px;color:#fff}
     .daquan a{display:flex;display:block;width:100%;margin-left:0;text-align:center;line-height:90px;background-image:"../../../public/img/icon.png"!important}
-    .daquan a:hover{background:#f00}
+    /* .daquan a:hover{background:#f00} */
     .zuo_one{display:flex;justify-content:space-around;flex-wrap:wrap;position:absolute;top:0;left:22%;width:400px;height:99%;background:#fff;}
     /*.zuo_one_s{display:flex;flex-direction:column;height:40px;}
     .zuo_one_s a{color:black;}

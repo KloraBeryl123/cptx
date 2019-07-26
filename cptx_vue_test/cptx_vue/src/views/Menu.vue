@@ -157,7 +157,4 @@ export default {
         font-size:18px;
         margin-bottom:5px;
     }
-    .menus .el-button--danger{
-    background-color:#d8316c !important;
-    }
 </style>

@@ -88,7 +88,7 @@
                             <a href=""><img :src="'http://127.0.0.1:3000/img/cp/'+item.img" alt=""></a>
                         </div>
                         <div style="height:100%;width:60%">
-                            <h6><a href="">{{item.title}}</a></h6>
+                            <h6><router-link to="../index3"><a href="">{{item.title}}</a></router-link></h6>
                             <span><a href="">{{item.subtitle}}</a></span>
                             <p>{{item.detail}}</p>
                         </div>

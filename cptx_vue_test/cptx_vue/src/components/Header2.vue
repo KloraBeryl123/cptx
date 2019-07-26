@@ -11,23 +11,23 @@
   text-color="#fff"
   active-text-color="#ffd04b">
 <el-menu-item style="color:white;font-size:26px;margin-left:0rem ;margin-right:3rem">菜谱天下</el-menu-item> 
-<el-menu-item style="color:white;font-size:18px;" index="1" ><a href="#" target="_blank" style="text-decoration:none;">首页</a></el-menu-item>
-<el-menu-item style="color:white;font-size:18px;" index="2" ><a href="#" target="_blank" style="text-decoration:none">菜谱</a></el-menu-item>
-<el-menu-item style="color:white;font-size:18px;" index="3" ><a href="#" target="_blank" style="text-decoration:none">食材</a></el-menu-item>
-<el-menu-item style="color:white;font-size:18px;" index="4" ><a href="#" target="_blank" style="text-decoration:none">搜索</a></el-menu-item>
+<el-menu-item style="color:white;font-size:18px;" index="1" ><router-link to="/index"><a href="#" target="_blank" style="text-decoration:none;">首页</a></router-link></el-menu-item>
+<el-menu-item style="color:white;font-size:18px;" index="2" ><router-link to="/cp"><a href="javascript:;" style="text-decoration:none">菜谱</a></router-link></el-menu-item>
+<el-menu-item style="color:white;font-size:18px;" index="3" ><a href="javascript:;" style="text-decoration:none">食材</a></el-menu-item>
+<el-menu-item style="color:white;font-size:18px;" index="4" ><a href="javascript:;" style="text-decoration:none">搜索</a></el-menu-item>
 <Input search  icon="ios-search" placeholder="搜索菜谱" @on-click="search()"
         style="width:13rem ;position:absolute;left:32rem;top:1rem;border-radius:4rem;" />
 
 
 <el-menu-item index="5" style="float:right">
-      <template slot="title"><img slot="icon" src="../assets/shouji.png"><a href="#" target="_blank" style="text-decoration:none;font-size:12px;margin-left:5px">客户端</a></template>
+      <template slot="title"><img slot="icon" src="../assets/shouji.png"><a href="javascript:;" style="text-decoration:none;font-size:12px;margin-left:5px">客户端</a></template>
     </el-menu-item>
    <el-menu-item index="6" style="float:right">
-      <template slot="title"><img slot="icon" src="../assets/qiandao.png"><a href="#" target="_blank" style="text-decoration:none;font-size:12px;margin-left:5px">签到有礼</a></template>
+      <template slot="title"><img slot="icon" src="../assets/qiandao.png"><a href="javascript:;" style="text-decoration:none;font-size:12px;margin-left:5px">签到有礼</a></template>
     </el-menu-item>
 
   <el-submenu index="7" style="float:right">
-      <template slot="title"><img slot="icon" src="../assets/jaihao.png"><span style="font-size:12px;margin-left:5px" >发布</span></template>
+      <template slot="title"><img slot="icon" src="../assets/jaihao.png"><router-link to="/Home"><span style="font-size:12px;margin-left:5px" >发布</span></router-link></template>
       <el-menu-item index="7-1">发话题</el-menu-item>
       <el-menu-item index="7-2">发菜谱</el-menu-item>
       <el-menu-item index="7-3">发日志</el-menu-item>    

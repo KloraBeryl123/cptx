@@ -69,12 +69,24 @@ server.post("/personal",(req,res)=>{
     }
   })
 })
+//查询数据库中内容
+server.get("/all",(req,res)=>{
+var sql="SELECT * FROM person";
+pool.query(sql,(err,result)=>{
+  if(err)throw err;
+  if(result.length>0)
+    res.send({code:1,data:result});
+  else{
+    res.send({code:-1,data:"您还没有发布菜谱哦，快去发布吧！"});
+  }
+})
+})
 
-//收藏菜谱
-server.get("/collect",(req,res)=>{
+//收藏菜谱在页面显示
+server.get("/coll",(req,res)=>{
   var obj=req.query;
-  var sql="SELECT * FROM content5";
-  pool.query(sql,(err,result)=>{
+  var sql="SELECT * FROM collect";
+  pool.query(sql,[obj],(err,result)=>{
     if(err)throw err;
     if(result.length>0)
     res.send({code:1,data:result});
@@ -84,19 +96,31 @@ server.get("/collect",(req,res)=>{
   })
 })
 
-//查询数据库中内容
-server.get("/all",(req,res)=>{
-var sql="SELECT * FROM person";
-pool.query(sql,(err,result)=>{
-  if(err)throw err;
-  if(result.length>0)
-  res.send({code:1,data:result});
-  else{
-    res.send({code:-1,data:"您还没有发布菜谱哦，快去发布吧！"});
-  }
+
+//添加收藏
+server.post("/mycol",(req,res)=>{
+  var obj=req.body;
+  var sql="INSERT INTO collect SET ?";
+  pool.query(sql,[obj],(err,result)=>{
+    if(err)throw err;
+    if(result.affectedRows>0){
+      res.send({code:1,msg:result})
+    }
+  })
+})
+//取消收藏
+server.get("/delcol",(req,res)=>{
+  var obj=req.query;
+  console.log(obj);
+  var sql="DELETE FROM collect WHERE cid=?";
+  pool.query(sql,[obj.cid],(err,result)=>{
+    if(err)throw err;
+    if(result.affectedRows>0){
+      res.send({code:1,msg:result});
+    }
+  })
 })
 
-})
 
 //删除菜谱
 server.get("/delete",(req,res)=>{
@@ -111,16 +135,6 @@ pool.query(sql,[pid],(err,result)=>{
   }
 })
 })
-// //查询菜谱功能
-// server.get('/search',(req,res)=>{
-//     var obj=req.query;
-//     var sql="SELECT * FROM personal WHERE food_name=?";
-//     pool.query(sql,[obj.food_name],(err,result)=>{
-//         if(err)throw err;
-//         console.log(result);
-//         res.send({code:1,data:result});
-//     })
-// })
 
 //园园
 server.get("/cai",( req,res)=>{
@@ -164,7 +178,7 @@ server.get("/you",(req,res)=>{
  //分页查询，先传入两个参数，pno,pagesize;
   //2:创建两条sql语句执行 放在一起执行
   var obj = {code:1,msg:"查询成功"};//先创建一个obj对象。
-  var sql = " SELECT id,title,arthor,img_url";
+  var sql = " SELECT *";
   sql+=" FROM content8";
   sql+=" LIMIT ?,?";
   var offset = (pno-1)*ps;

@@ -110,11 +110,11 @@
       <li v-for="(item,i) of list3" :key="i">
       <a :title="item.title" href="#" target="_blank">
           <div style=" margin-top:1rem">
-              <img class="ul3-img" :src="'http://127.0.0.1:3000'+item.img_url" style="display: block;">
+              <router-link to="../Cp"><a><img class="ul3-img" :src="'http://127.0.0.1:3000'+item.img_url" style="display: block;"></a></router-link>
           </div>
       </a>
       <br/>
-      <span>{{item.title}}</span>  
+      <span>{{item.title}}</span>
       </li>
     </ul> 
      <content6></content6>
@@ -140,6 +140,7 @@ import Footer from "../Footer"
          mounted(){
      },           
         methods: {
+            
            search(){
                location.href="http://www.baidu.com";         
             },

@@ -128,9 +128,6 @@ export default {
     position: relative;
     overflow: hidden;
   }
-  .avatar-uploader .el-upload:hover {
-    border-color: #409EFF;
-  }
   .avatar-uploader-icon {
     font-size: 28px;
     color: #8c939d;
@@ -152,7 +149,7 @@ export default {
     margin:20px !important;
 }
 .left span{
-  color:red;
+  color:#F57272;
 }
 .mybtn{
   text-align:center;
@@ -160,14 +157,6 @@ export default {
 .mybtn .el-button{
   font-size:20px;
   
-}
-.mybtn .el-button--danger.is-plain{
-  color:#d8316c;
-  border-color:#f7bcd1;
-}
-.mybtn .el-button--danger.is-plain:focus, .el-button--danger.is-plain:hover{
-  background-color:#d8316c !important;
-  border-color:#d8316c !important;
 }
 .el-page-header__content{
   font-size:20px !important;
