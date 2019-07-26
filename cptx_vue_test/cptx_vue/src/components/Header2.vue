@@ -12,7 +12,7 @@
   active-text-color="#ffd04b">
 <el-menu-item style="color:white;font-size:26px;margin-left:0rem ;margin-right:3rem">菜谱天下</el-menu-item> 
 <el-menu-item style="color:white;font-size:18px;" index="1" ><router-link to="/index"><a href="#" target="_blank" style="text-decoration:none;">首页</a></router-link></el-menu-item>
-<el-menu-item style="color:white;font-size:18px;" index="2" ><router-link to="/cp"><a href="javascript:;" style="text-decoration:none">菜谱</a></router-link></el-menu-item>
+<el-menu-item style="color:white;font-size:18px;" index="2" ><router-link to="/index2"><a href="javascript:;" style="text-decoration:none">菜谱</a></router-link></el-menu-item>
 <el-menu-item style="color:white;font-size:18px;" index="3" ><a href="javascript:;" style="text-decoration:none">食材</a></el-menu-item>
 <el-menu-item style="color:white;font-size:18px;" index="4" ><a href="javascript:;" style="text-decoration:none">搜索</a></el-menu-item>
 <Input search  icon="ios-search" placeholder="搜索菜谱" @on-click="search()"
