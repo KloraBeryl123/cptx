@@ -177,7 +177,7 @@ import Footer from "../Footer"
 </script>
 
 <style  scoped>
-.meishi{width:80%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;}
+.meishi{width:70%;margin:0 auto;display:flex;margin-top:15px;justify-content:space-between;}
 .meishi a img{width:108px;height:60px}
 .but{
     width:60px;height:30px;
@@ -207,7 +207,7 @@ import Footer from "../Footer"
     justify-content:space-around;   
     box-shadow: 0 2px 3px #ddd;
     }
-.ul3{width:75%;margin:0 auto;list-style:none;display:flex}
+.ul3{width:70%;margin:0 auto;list-style:none;display:flex;margin-right:13rem}
 .ul3 img{width:50px;height:50px}
 .ul3 span{font-size:14px}
 .ul3{line-height:12px;text-align:center;justify-content:space-around}

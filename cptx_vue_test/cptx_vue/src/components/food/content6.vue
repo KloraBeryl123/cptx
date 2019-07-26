@@ -25,7 +25,7 @@
         </div>
         <span style="font-size:17px;margin-top:8px;display:inline-block">{{item.title}}</span>
       <br/>
-      <span ><img :class="shows==true?'red':''" @click="handleClick" style="color:red;margin: 3px 0 4px 0;" src="../../../public/img/shoucan.png" alt=""></span>  
+      <span ><img  @click="handleClick($event)" style="color:red;margin: 3px 0 4px 0;" :src="xinxin" alt=""></span>  
       </li>  
     </ul>
     </div>
@@ -44,7 +44,8 @@ export default {
      list:[],     
      pno:0,
      ps:32 ,
-    shows:false
+    shows:false,
+    xinxin:require("../../assets/xin1.png"),
      
     }
   },
@@ -69,8 +70,11 @@ export default {
             })
       },
       handleClick(e){
-          console.log(e.target);
-          this.shows==true;
+           //console.log(e.target);
+          //.style.backgroundColor="#ff6767"
+          //var xinxin=this.xinxin;
+          e.target.src=require("../../assets/xin2.png");
+
       }
 
     },    
@@ -82,16 +86,16 @@ export default {
 </script>
 
 <style scoped>
-.min{width:75%;margin:0 auto;margin-top:10px;border-bottom:1px solid #ddd}
+.min{width:72%;margin:0 auto;margin-top:10px;border-bottom:1px solid #ddd}
 .min3{content:"";display:block;clear:both;}
 .min1  a{font-size:20px;line-height:24px;text-decoration:none;color:#666;float:left;margin-right:15px};
-.tab1-ul{width:60%;margin:0 auto;}
-.tab1-ul li{width:23.3%;}
-.two-light{
+.tab1-ul{width:100%;margin:0 auto;}
+.tab1-ul li{width:20%; overflow: hidden;}
+/* .two-light{
   width:280px;
   height: 280px;
   overflow: hidden;
-}
+} */
 .two-light img{width:100%;}
 .two-light img:hover{transform:scale3d(1.1, 1.1, 1);transition:all .8s}
 .al{
@@ -107,8 +111,8 @@ export default {
     margin-left:573px;
     padding-right:5.5rem;
     }
-.tab1-div{width:75%;margin:0 auto;margin-top:2rem;}
-.tab1-div>ul{list-style:none;padding:0;margin-left: 2rem}
+.tab1-div{width:83%;margin:0 auto;margin-top:2rem;}
+.tab1-div>ul{list-style:none;padding:0;margin-left: 4.7rem}
 .tab1-div ul li{text-align:center}
 .tab1-div ul li span{color:#999;font-size:12px;margin-left:4px}
 .tab1-div ul li{margin-right:20px}

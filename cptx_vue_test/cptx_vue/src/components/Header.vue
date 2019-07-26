@@ -9,7 +9,7 @@
   text-color="#fff"
 
   active-text-color="#ffd04b">
-<el-menu-item style="color:white;font-size:25px;margin-left:2.5rem ;margin-right:5.5rem">菜谱天下</el-menu-item> 
+<el-menu-item style="color:white;font-size:25px;margin-left:3rem ;margin-right:5.5rem">菜谱天下</el-menu-item> 
 <el-menu-item index="1" ><a href="#" target="_blank" style="text-decoration:none;">首页</a></el-menu-item>
 <el-menu-item index="2" ><a href="#" target="_blank" style="text-decoration:none">菜谱</a></el-menu-item>
 <el-menu-item index="3" ><a href="#" target="_blank" style="text-decoration:none">食材</a></el-menu-item>

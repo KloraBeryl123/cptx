@@ -262,7 +262,7 @@ export default {
 .part-two{width:20%}
 
 
-.container{width:60%;margin:0 auto;display:flex;}
+.container{width:70%;margin:0 auto;display:flex;}
 .first{width:80%;}
 .second{width:33%}
 .you_x{width:100%}

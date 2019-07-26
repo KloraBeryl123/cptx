@@ -146,6 +146,7 @@ export default {
             this.identifyCode = "";
             this.makeCode(this.identifyCodes, 4);
         },
+        //产生四位随机数
         makeCode(o, l) {
             for (let i = 0; i < l; i++) {
                 this.identifyCode += this.identifyCodes[
