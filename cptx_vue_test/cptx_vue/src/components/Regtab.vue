@@ -61,6 +61,7 @@
 <script>
 import SIdentify  from './SIdentify'
     export default {
+        
         data(){
             return{
               uphone:"",
@@ -85,6 +86,16 @@ import SIdentify  from './SIdentify'
           this.makeCode(this.identifyCodes, 4);
         },
         methods:{
+          // //鼠标离开图形验证码不对就清空input
+        acodeverify(){
+            if(this.identifyCode!==this.acode){
+              console.log(this.identifyCode)
+              //console.log(this.acode)
+              this.acode="";
+              this.refreshCode();
+              this.$Message.warning("请输入正确的图形验证码");
+            }
+          },
           //验证码
           randomNum(min, max) {
             return Math.floor(Math.random() * (max - min) + min);
@@ -101,14 +112,6 @@ import SIdentify  from './SIdentify'
               ];
             }
             console.log(this.identifyCode);
-          },
-          // //鼠标离开图形验证码不对就清空input
-          acodeverify(){
-            if(this.identifyCodes!==this.acode){
-              this.acode="";
-              this.refreshCode();
-              this.$Message.warning("请输入正确的图形验证码");
-            }
           },
           //注册部分**************************************************************************
           //鼠标离开验证手机号格式是否正确
