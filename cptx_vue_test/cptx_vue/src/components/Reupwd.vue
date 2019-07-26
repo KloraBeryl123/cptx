@@ -129,10 +129,10 @@ export default {
         verify(){
             // console.log(this.identifyCode);
             // console.log();
-            if(this.identifyCode==this.code){
+            if(this.identifyCode==this.ccode){
                 this.$Message.success("验证码输入正确");
             }else{
-                this.code="";
+                this.ccode="";
                 this.refreshCode();
                 this.$Message.warning("验证码输入错误");
             }
