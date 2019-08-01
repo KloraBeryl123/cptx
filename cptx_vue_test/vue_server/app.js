@@ -167,7 +167,7 @@ server.get("/tupian",( req,res)=>{
 })
 
 
-
+//分页-------------------------------------------------------
 server.get("/you",(req,res)=>{
   //1:参数 pno pageSize 页码 页大小
   var pno = req.query.pno;
@@ -191,7 +191,7 @@ server.get("/you",(req,res)=>{
     var sql="SELECT count(*) as c from content8";    //
     pool.query(sql,(err,result)=>{
      if(err) throw err;//result是查询的总行数
-     var pc=Math.ceil(result[0].c/ps);//result:{c:43}
+     var pc=Math.ceil(result[0].ps);//result:{c:43}
      obj.pc=pc;//pc总页数，也放到obj中
      res.send(obj);                                      
     })

@@ -19,7 +19,7 @@ import'./font/iconfont.css'
 Vue.use( new Swiper);
 
 Vue.use(iView);
-//结果：在所有组件中都可以用this.axios.get()发送请求
+
 Vue.use(elementui);
 
 Vue.config.productionTip = false

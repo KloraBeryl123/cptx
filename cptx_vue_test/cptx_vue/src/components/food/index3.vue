@@ -1,6 +1,6 @@
 <template>
 <div>
-    <header2></header2>
+    <header2 ></header2>
  <!-- <div class="meishi">
         <a href="#"><img src="../../assets/logo.png" alt=""></a>  
         <button class="but">菜谱</button>
@@ -107,7 +107,7 @@
 <!-- <div class="tupian">
      <img src="../../assets/aaa.png" alt="">
 </div>       -->
-   <content7 style="margin-top:2rem;"></content7>
+   <content7 style="margin-top:6rem;"></content7>
    <Footer style="margin-top:3rem;"></Footer>    
 </div> 
 </template>
@@ -128,7 +128,7 @@ export default {
   },
   components:{
       content7,
-      Header2,
+      'header2':Header2,
       Footer,
   },
   methods: {

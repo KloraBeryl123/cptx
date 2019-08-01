@@ -35,7 +35,7 @@
         <span style="font-size:12px;margin-left:5px"  @click="toreg1">{{dlzc}}</span>
       </template>
       <el-menu-item index="8-1" :disabled="disabled" @click="tcdl1">{{tcorno}}</el-menu-item>   
-    </el-submenu>
+  </el-submenu>
 </el-menu>
 
      </div>      

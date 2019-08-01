@@ -1,6 +1,9 @@
 <template>
     <div style="width:100%;margin:0 auto">
-       <video src="../assets/mda-jbmmu19cuuc45wai.mp4" controls poster="../assets/sp.jpg" preload="metadata" id="v3" style="width:83%;height:400px;object-fit: fill"></video>
+       <video src="../assets/mda-jbmmu19cuuc45wai.mp4" 
+       controls poster="../assets/sp.jpg" 
+       preload="metadata" id="v3" 
+       style="width:83%;height:400px;object-fit: fill"></video>
     </div>
 </template>
 <script>
